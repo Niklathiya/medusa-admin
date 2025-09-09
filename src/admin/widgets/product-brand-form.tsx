@@ -138,7 +138,7 @@ const ProductBrandFormWidget = ({
   // Update brand mutation
   const updateBrandMutation = useMutation({
     mutationFn: async (brandId: string | null) => {
-      return sdk.client.fetch(`/admin/products/${product.id}?fields=brand`, {
+      return sdk.client.fetch(`/admin/products/${product.id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
